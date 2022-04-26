@@ -2,7 +2,6 @@
 const express = require("express");
 const connect = require("./config/db");
 const cors = require("cors")
-const port = process.env.PORT || 8080
 
 const app = express();
 app.use(express.json());
@@ -17,11 +16,11 @@ app.use("/listing",serviceController)
 const auth = require("./controllers/authController")
 app.use("/",auth)
 
-app.listen(port,async() =>{
+app.listen(8080,async() =>{
 
     try {
         await connect();
-        console.log("listening port")
+        console.log("listening port 8080")
     } 
     catch (e) {
         console.log(e.message)

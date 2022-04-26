@@ -8,7 +8,7 @@ const router = express.Router()
 
 const newToken = (user) => {
 
-    return jwt.sign({user}, process.env.JWT_SECRET_KEY);
+    return jwt.sign({user}, prachi);
 }
 
 router.post("/register" , async(req,res) => {

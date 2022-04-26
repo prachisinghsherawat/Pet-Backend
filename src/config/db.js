@@ -1,11 +1,10 @@
 
 const mongoose = require("mongoose");
-require(".env").config()
 
 const connect = () => {
 
     return mongoose.connect(
-        process.env.MONGODB_URL
+        "mongodb+srv://Prachi:prachi_123@cluster0.o9cs6.mongodb.net/PetHouseData?retryWrites=true&w=majority"
     )
 }
 
